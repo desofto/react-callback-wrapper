@@ -2,7 +2,7 @@
 
 Allows to optimize components re-rendering using `memo`, substitutes `useCallback`.
 
-With `useCallback` we have a problem that when state is changed, callback function is re-generate as well (we should specify state as dependents) and, as result, all components which depend on this callback, are re-rendered.
+With `useCallback` we have a problem that when state is changed, callback function is re-generated as well (we should specify state as dependents) and, as result, all components which depend on this callback, are re-rendered.
 Using `callback-wrapper` it is possible to keep callback function immutable and still have a fresh state inside.
 
 Just install the package:
