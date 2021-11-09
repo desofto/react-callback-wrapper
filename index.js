@@ -1,10 +1,10 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useRef } from 'react'
 
 export default function useCallbackWrapper(fn) {
-  const [invoke] = useState({ callback: fn })
-  invoke.callback = fn
+  const callback = useRef(null)
+  callback.current = fn
 
   return useCallback(() => {
-    invoke.callback()
-  }, [invoke])
+    callback.current()
+  }, [callback])
 }
