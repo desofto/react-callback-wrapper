@@ -1,10 +1,10 @@
-import { useCallback, useRef } from 'react'
+import React from 'react'
 
 export default function useCallbackWrapper(fn) {
-  const callback = useRef(null)
+  const callback = React.useRef(null)
   callback.current = fn
 
-  return useCallback(() => {
-    callback.current()
+  return React.useCallback((...params) => {
+    callback.current(...params)
   }, [callback])
 }

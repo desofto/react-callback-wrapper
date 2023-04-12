@@ -1,6 +1,6 @@
 {
   "name": "react-callback-wrapper",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Allows to optimize components re-rendering using `memo`, substitutes `useCallback`.",
   "author": "<Dmitry Silchenko> (https://github.com/desofto/)",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "callback",
     "immutable"
   ],
-  "dependencies": {
-    "react": "^17.0.2"
+  "peerDependencies": {
+    "react": ">= 16"
   }
 }
